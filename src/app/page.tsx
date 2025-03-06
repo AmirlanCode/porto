@@ -1,21 +1,20 @@
 "use client";
 import { motion } from "framer-motion";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-
 import Image from "next/image";
 
 const Home = () => {
   return (
     <div className="min-h-screen bg-gray-900 text-white font-geist-sans">
       {/* Hero Section */}
-      <section className="min-h-screen flex items-center justify-center text-center">
+      <section className="min-h-screen flex items-center justify-center text-center px-4">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
           {/* Profile Picture */}
-          <div className="w-40 h-40 rounded-full overflow-hidden border-[6px] border-gray-600 shadow-2xl mx-auto transform transition duration-300 hover:scale-105">
+          <div className="w-32 h-32 md:w-40 md:h-40 rounded-full overflow-hidden border-[4px] md:border-[6px] border-gray-600 shadow-2xl mx-auto transform transition duration-300 hover:scale-105">
             <Image
               src="/amirlan.jpeg"
               alt="Profile"
@@ -24,11 +23,13 @@ const Home = () => {
               className="object-cover"
             />
           </div>
-          <h1 className="text-5xl font-bold mb-4 mt-5">Amirlan Aubakirov</h1>
-          <p className="text-xl text-gray-400 mb-8">
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 mt-5">
+            Amirlan Aubakirov
+          </h1>
+          <p className="text-lg md:text-xl text-gray-400 mb-8">
             Flutter Developer | Creating beautiful and functional applications
           </p>
-          <div className="flex justify-center space-x-4">
+          <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-4">
             <a
               href="#experience"
               className="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors"
@@ -46,9 +47,9 @@ const Home = () => {
       </section>
 
       {/* Experience Section */}
-      <section id="experience" className="py-16 bg-gray-800">
-        <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center mb-8">
+      <section id="experience" className="py-16 bg-gray-800 px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">
             Work Experience
           </h2>
           <div className="space-y-6">
@@ -171,9 +172,9 @@ const Home = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="py-16 bg-gray-900">
-        <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold mb-8">Contact</h2>
+      <section id="contact" className="py-16 bg-gray-900 px-4">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-2xl md:text-3xl font-bold mb-8">Contact</h2>
           <div className="flex justify-center space-x-6">
             <a
               href="https://www.linkedin.com/in/amirlan-aubakirov-71256b239"
@@ -181,7 +182,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              <FaLinkedin size={32} />
+              <FaLinkedin size={28} />
             </a>
             <a
               href="https://github.com/AmirlanCode"
@@ -189,7 +190,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-white transition-colors"
             >
-              <FaGithub size={32} />
+              <FaGithub size={28} />
             </a>
           </div>
         </div>
